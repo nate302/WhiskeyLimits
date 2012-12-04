@@ -1,4 +1,4 @@
-package cz.limitik.limit;
+package us.whiskey.whiskeyLimits;
 
 import java.util.Iterator;
 import java.util.Timer;

@@ -1,4 +1,4 @@
-package cz.limitik.limit;
+package us.whiskey.whiskeyLimits;
 
 import java.io.File;
 import java.io.FileNotFoundException;
