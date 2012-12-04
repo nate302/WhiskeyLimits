@@ -1,4 +1,4 @@
-package us.whiskey.whiskeyLimits;
+package cz.limitik.limit;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -6,12 +6,12 @@ import org.bukkit.entity.Player;
 
 public class limitWarmUpTimer extends TimerTask {
 	
-	private limitCoolDown bCoolDown;
+	private limit bCoolDown;
 	private Player player;
 	private String pre;
 	private String message;
 
-	public limitWarmUpTimer(limitCoolDown bCoolDown, Timer timer, Player player,
+	public limitWarmUpTimer(limit bCoolDown, Timer timer, Player player,
 			String pre, String message) {
 		this.bCoolDown = bCoolDown;
 		this.player = player;

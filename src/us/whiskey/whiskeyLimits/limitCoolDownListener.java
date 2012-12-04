@@ -1,4 +1,4 @@
-package us.whiskey.whiskeyLimits;
+package cz.limitik.limit;
 
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -21,12 +21,12 @@ import org.bukkit.event.player.PlayerToggleSprintEvent;
 import util.limitChat;
 
 public class limitCoolDownListener<a> implements Listener {
-	private final limitCoolDown plugin;
+	private final limit plugin;
 	private boolean blocked = false;
 	private static ConcurrentHashMap<Player, Location> playerloc = new ConcurrentHashMap<Player, Location>();
 	private static ConcurrentHashMap<Player, String> playerworld = new ConcurrentHashMap<Player, String>();
 
-	public limitCoolDownListener(limitCoolDown instance) {
+	public limitCoolDownListener(limit instance) {
 		plugin = instance;
 	}
 
@@ -352,7 +352,7 @@ public class limitCoolDownListener<a> implements Listener {
 		if (!event.isCancelled()) {
 			limitCoolDownManager.setUses(player, pre, message);
 			if (limitConfigManager.getCommandLogging()) {
-				limitCoolDown.commandLogger(player.getName(), pre + message);
+				limit.commandLogger(player.getName(), pre + message);
 			}
 		}
 	}

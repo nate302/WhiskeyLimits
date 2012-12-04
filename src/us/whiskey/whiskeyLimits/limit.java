@@ -1,4 +1,4 @@
-package us.whiskey.whiskeyLimits;
+package cz.limitik.limit;
 
 import java.io.IOException;
 import java.util.logging.Logger;

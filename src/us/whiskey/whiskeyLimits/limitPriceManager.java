@@ -1,4 +1,4 @@
-package us.whiskey.whiskeyLimits;
+package cz.limitik.limit;
 
 import org.bukkit.entity.Player;
 
@@ -8,7 +8,7 @@ import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.economy.EconomyResponse;
 
 public class limitPriceManager {
-	private static Economy economy = limitCoolDown.getEconomy();
+	private static Economy economy = limit.getEconomy();
 	public static boolean payForCommand(Player player, String pre, int price, String name) {
 		if (economy == null){
 			return true;}

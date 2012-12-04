@@ -1,4 +1,4 @@
-package us.whiskey.whiskeyLimits;
+package cz.limitik.limit;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,8 +19,8 @@ public class limitConfigManager {
 	static List<String> players = new LinkedList<String>();
 
 	@SuppressWarnings("static-access")
-	public limitConfigManager(limitCoolDown limitCoolDown) {
-		confFile = new File(limitCoolDown.getDataFolder(), "config.yml");
+	public limitConfigManager(limit limit) {
+		confFile = new File(limit.getDataFolder(), "config.yml");
 		if (confFile.exists()) {
 			conf = new YamlConfiguration();
 			try {
@@ -33,7 +33,7 @@ public class limitConfigManager {
 				e.printStackTrace();
 			}
 		} else {
-			this.confFile = new File(limitCoolDown.getDataFolder(), "config.yml");
+			this.confFile = new File(limit.getDataFolder(), "config.yml");
 			this.conf = new YamlConfiguration();
 			conf.options().copyDefaults(true);
 			conf.addDefault("options.options.cancel_warmup_on_damage", false);

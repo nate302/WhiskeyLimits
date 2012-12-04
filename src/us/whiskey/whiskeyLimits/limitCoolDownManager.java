@@ -1,4 +1,4 @@
-package us.whiskey.whiskeyLimits;
+package cz.limitik.limit;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -21,7 +21,7 @@ public class limitCoolDownManager {
 	private static YamlConfiguration confusers;
 	private static File confFile;
 
-	public limitCoolDownManager(limitCoolDown bCoolDown) {
+	public limitCoolDownManager(limit bCoolDown) {
 		confFile = new File(bCoolDown.getDataFolder(), "users.yml");
 
 		confusers = new YamlConfiguration();
@@ -382,7 +382,7 @@ public class limitCoolDownManager {
 			confusers.set("users." + player.getName().toLowerCase() + ".uses." + pre
 					+ message, uses);
 		} catch (IllegalArgumentException e) {
-			limitCoolDown.log.warning("Player " + player.getName()
+			limit.log.warning("Player " + player.getName()
 					+ " used empty command and caused this error!");
 		}
 	}

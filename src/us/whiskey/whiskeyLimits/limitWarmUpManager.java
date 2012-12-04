@@ -1,4 +1,4 @@
-package us.whiskey.whiskeyLimits;
+package cz.limitik.limit;
 
 import java.util.Iterator;
 import java.util.Timer;
@@ -14,7 +14,7 @@ public class limitWarmUpManager {
 
 	static Timer scheduler;
 
-	public static void startWarmUp(limitCoolDown bCoolDown, Player player,
+	public static void startWarmUp(limit bCoolDown, Player player,
 			String pre, String message, int warmUpSeconds) {
 		pre = pre.toLowerCase();
 		long warmUpMinutes = Math.round(warmUpSeconds / 60);
